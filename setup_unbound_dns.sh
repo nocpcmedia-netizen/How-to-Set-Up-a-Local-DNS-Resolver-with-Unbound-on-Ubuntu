@@ -7,9 +7,9 @@
 set -e
 
 # === CONFIGURATION ===
-IP="100.100.100.37"
-LOCAL_ZONE="sohag.lan"
-ZONE_HOSTNAME="ns.sohag.lan"
+IP="160.25.46.10"
+LOCAL_ZONE="adata.co.id"
+ZONE_HOSTNAME="ns.adata.co.id"
 UNBOUND_CONF="/etc/unbound/unbound.conf"
 RSYSLOG_CONF="/etc/rsyslog.d/unbound.conf"
 LOGROTATE_CONF="/etc/logrotate.d/unbound"
@@ -46,6 +46,7 @@ server:
   use-caps-for-id: yes
 
   access-control: 10.0.0.0/8 allow
+  access-control: 160.25.46.0/23 allow
   access-control: 192.168.0.0/16 allow
   access-control: 172.16.0.0/12 allow
 
